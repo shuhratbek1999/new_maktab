@@ -1,0 +1,28 @@
+.newss{
+    width: 450px;
+    padding: 10px;
+}
+.newss .n-icon{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.newss .line{
+    width: 440px;
+    border: 1px solid rgb(204, 202, 202);
+    padding: -10px !important;
+}
+.newss .text{
+    margin: 20px 0px;
+}
+.newss .foter{
+    display: flex;
+    justify-content: space-between;
+}
+.newss .title{
+    font-size: 11px;
+}
+.newss .name{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}

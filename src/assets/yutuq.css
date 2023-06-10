@@ -1,0 +1,27 @@
+.yutuqlar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px;
+}
+.yutuqlar .yutuq_left{
+    width: 600px;
+}
+.yutuqlar .yutuq_left .yutuq_list ul{
+    list-style: none;
+}
+.yutuqlar .yutuq_left .yutuq_list ul li{
+    margin: 10px 0px;
+}
+.yutuqlar .yutuq_left .title1{
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(47, 7, 83);
+    font-family: 'Times New Roman', Times, serif;
+}
+.yutuqlar .yutuq_left .title2{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}

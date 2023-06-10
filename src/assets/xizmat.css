@@ -1,0 +1,53 @@
+.xizmatlar{
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.xizmatlar .xizmat_middle{
+    width: 1100px;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.xizmatlar .xizmat_right{
+    font-size: 25px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+.xizmatlar .xizmat_right h2:hover{
+    transform: scale(1.1);
+}
+.xizmatlar .xizmat_right h2{
+    text-align: center;
+    color: rgb(44, 4, 82);
+    font-weight: 600;
+    transition: all 0.8s ease-in-out;
+}
+.xizmatlar .icons{
+    font-size: 30px;
+}
+.xizmatlar .xizmat_left .list{
+    display: flex;
+}
+.xizmatlar .xizmat_left{
+    margin: 20px 0px;
+}
+.xizmatlar .xizmat_left .list .list_item{
+    width: 250px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    margin: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(65, 64, 64);
+    transition: all 0.8s ease-in-out;
+}
+.xizmatlar .xizmat_left .list .list_item:hover{
+    transform: scale(1.07);
+}

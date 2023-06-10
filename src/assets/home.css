@@ -1,0 +1,48 @@
+.haqimizda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+.haqimizda .title{
+    padding: 20px 0px;
+    font-size: 25px;
+    color: blueviolet;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+.haqimizda .title:hover{
+    transform: scale(0.8);
+}
+.haqimizda .content{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.haqimizda .content .left{
+    width: 500px;
+}
+.haqimizda .content .right{
+    width: 500px;
+}
+.haqimizda .content .right .btn{
+    margin: 20px 0px;
+}
+.haqimizda .content .left p{
+    font-weight: 600;
+    font-size: 20px;
+}
+.haqimizda .content .left .content-list{
+    margin: 10px 0px;
+}
+.haqimizda .content .left .content-list li{
+    font-weight: 600;
+}
+.haqimizda .content .right .titles{
+    font-weight: 600;
+    font-size: 20px;
+}

@@ -1,0 +1,79 @@
+.boglanish{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 40px 0px;
+}
+.boglanish .title1{
+    font-weight: 600;
+    color: cadetblue;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.boglanish .title2{
+    width: 1100px;
+    font-weight: 400;
+    color: cadetblue;
+    font-size: 16px;
+    margin: 20px 0px;
+    text-align: center;
+}
+.boglanish .boglanish_list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.boglanish .boglanish_list .list1{
+    width: 400px;
+    margin: 0px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-top: 2px solid red;
+}
+.boglanish .boglanish_list .list2{
+    width: 800px;
+    min-height: 400px;
+    margin: 0px 30px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    border-top: 2px solid red;
+}
+.boglanish .boglanish_list .list2 .input{
+    display: flex;
+    justify-content: space-between;
+}
+.boglanish .boglanish_list .list2 .input .n-input{
+    width: 370px;
+}
+.boglanish .boglanish_list .list1 .lists{
+    list-style: none;
+}
+.boglanish .boglanish_list .list1 .lists .list_item{
+    display: flex;
+    margin: 20px 0px;
+}
+.boglanish .boglanish_list .list1 .lists .list_item p{
+    margin: 0px 10px;
+}
+.boglanish .boglanish_list .list1 .lists .list_item p span{
+    font-weight: bolder;
+}
+.boglanish .icons{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(200, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
