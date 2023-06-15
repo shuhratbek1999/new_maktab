@@ -10,10 +10,12 @@ const data = () =>{
             url: 'news/all'
         }).then(res => {
             if(res.data.data){
-                news.value = res.data.data;
                 for(let key of res.data.data){
-                    self.img = BASE_URL+ "/img/" + key.image;
-                    console.log(key, BASE_URL);
+                    const trimmedTitle = key.text.substring(0, 50);
+                    key.text = trimmedTitle;
+                    key.image = BASE_URL+ key.image;
+                    news.value.push(key);
+                    console.log(key)
                 }
             }
         })
@@ -25,13 +27,14 @@ onMounted(() => {
 <template>
     <div class="newsList">
         <slot>
-            <div class="list" v-for="(item,index) in newss" :key="index">
-                <div class="img"><img :src="'BASE_URL' + '/item.image'" width="90px" height="90px" alt="yangiliklar"></div>
+            <div class="list" v-for="(item,index) in news" :key="index">
+                <img :src="item.image" alt="" width="100">
+                <div class="img"><img :src="item.image" width="90px" height="90px" alt="yangiliklar"></div>
                 <div class="text">
                     <div class="name">
-                        Tadbir bo'lib o'tdi {{ item }}
+                        {{ item.text.replace(/^(.{50}[^\s]*).*/, "$1") }}
                     </div>
-                    <div class="title">Muallif:20-maktab - 28/05/2018</div>
+                    <div class="title">{{ item.aftor }} - {{ item.datetime }}</div>
                 </div>
           </div>
         </slot>

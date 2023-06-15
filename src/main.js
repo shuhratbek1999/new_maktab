@@ -7,7 +7,7 @@ import axios from 'axios'
 import router from './router'
 import naivue from 'naive-ui'
 import Provider from './components/Provider.vue';
-let BASE_URL = "http://194.113.153.92:3013/api/v1/admin-app/";
+let BASE_URL = "http://185.196.213.159:4002/api/v1/admin-app/";
 const Bearer = "Bearer ";
 axios.interceptors.request.use(
     function (config) {

@@ -7,6 +7,7 @@ import Oquv_jarayoni from '../views/Oquv_jarayoni.vue';
 import Olimpiada from '../views/Olimpiada.vue';
 import Boglanish from '../views/boglanish.vue';
 import Login from '../views/Login.vue';
+import newsAboutView from '../views/newsAboutView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,11 @@ const router = createRouter({
       path: '/news',
       name: 'NewsVue',
       component: yangiliklar
+    },
+    {
+      path: '/news_about',
+      name: 'NewsAboutView',
+      component: newsAboutView
     },
     {
       path: '/oquv',

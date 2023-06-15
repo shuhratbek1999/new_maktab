@@ -1,48 +1,66 @@
 <script>
 import {defineComponent} from 'vue'
 import {ChatbubbleEllipsesOutline} from '@vicons/ionicons5';
-// import axios from 'axios'
+import axios from 'axios'
+import { useCounterStore } from '../stores/counter'
+import {useRouter} from 'vue-router'
 // const BASE_URL = inject('BASE_URL');
 export default defineComponent({
    components:{ChatbubbleEllipsesOutline},
+   setup() {
+    const counterStore = useCounterStore();
+    const router = useRouter();
+
+    return { counterStore, router }
+  },
    data(){
     return{
-        newss: [],
+        news: []
     }
    },
-//    methods:{
-//       data(){
-//         let self = this;
-//         axios({
-//             method: 'get',
-//             url: 'news/all'
-//         }).then(res => {
-//             if(res.data.data){
-//                 self.newss = res.data.data;
-//                 console.log(res.data);
-//             }
-//         })
-//       }
-//    },
-//    mounted(){
-//       this.data();
-//    }
+   methods:{
+    datas(){
+        let self = this;
+        axios({
+            method: 'get',
+            url: 'news/all'
+        }).then(res => {
+            if(res.data.data){
+                console.log(res.data.data)
+                self.news = res.data.data;
+            }
+        })
+      },
+      Batafsil(id){
+        console.log(id)
+            axios({
+                method: 'get',
+                url: 'news/one/' + id
+            }).then(res => {
+                this.counterStore.newsAdd(res.data.data);
+                this.router.push({path: '/news_about'})
+            })
+      }
+   },
+   mounted(){
+    this.datas()
+   }
 })
 </script>
 <template>
     <div class="newsss">
         <slot>
-            <div class="newss">
-                <div class="title">Muallif:18-maktab - 28/05/2018</div>
+            <div class="newss" v-for="(item,index) in news" :key="index">
+                <div class="title">{{ item.aftor }} - {{ item.datetime }}</div>
                 <div class="name">
-                    Informatikadan viktorina
+                    {{ item.name }}
                 </div>
                 <div class="line"></div>
                 <div class="text">
-                    2018 yilning 18 aprel kuni “Yil o’qituvchisi” ko’rik tanlovining tuman bosqichi o’tkazildi.  “Yil o’qituvchisi” ko’rik tanlovining tuman bosqichida ona tili fani o’qituvc...
+                    {{ item.text }}
                 </div>
                 <div class="foter">
-                    <div class="btn">
+                    <div class="btn" @click="Batafsil(item.id)">
                         <n-button type="error">
                         BATAFSIL...
                         </n-button>

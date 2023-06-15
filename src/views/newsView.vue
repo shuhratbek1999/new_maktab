@@ -10,6 +10,10 @@ import { useMessage } from "naive-ui";
  import axios from 'axios'
  import {onMounted, ref} from 'vue';
  import {useRouter} from 'vue-router';
+ import {useCounterStore} from '../stores/counter'
+import { storeToRefs } from "pinia";
+ const counterStore = useCounterStore();
+ const { todoList } = storeToRefs(counterStore);
  const message = useMessage();
  const Newslar = ref({
     name: "",
@@ -43,9 +47,9 @@ import { useMessage } from "naive-ui";
     })
  }
 //  const user = JSON.parse(localStorage.getItem('user'))
-//  onMounted(() => {
-//      console.log(user);
-//  })
+ onMounted(() => {
+     console.log(todoList, "storee");
+ })
  const router = useRouter();
  const active = ref(false);
     const activate = () => {
@@ -64,15 +68,9 @@ const Home = () => {
                 <div class="title">Maktab yangiliklari</div>
                 <div class="list">
                     <News />
-                    <News />
-                    <News />
-                    <News />
                 </div>
             </div>
             <div class="new_list">
-                <NewsList />
-                <NewsList />
-                <NewsList />
                 <NewsList />
                 <div style="margin: 20px">
                     <n-button @click="activate">
@@ -128,8 +126,8 @@ const Home = () => {
             </div>
         </div>
         <Boglanish/>
-        <Footer/>
         <Info/>
+        <Footer/>
     </div>
 </template>
 <style scoped>
